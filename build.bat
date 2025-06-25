@@ -70,3 +70,16 @@
     cmake --install build --config Release
     @cd ..
 @endlocal
+
+@setlocal
+    @echo ========== opusenc ==========
+    ::git clone https://github.com/xiph/opusenc.git --recursive
+    git clone https://github.com/Demonese/libopusenc-windows.git opusenc --recursive
+    cd opusenc
+    ::git checkout -b feature/shared-library-exports origin/feature/shared-library-exports
+    ::git branch
+    cmake -S . -B build %MSVC_SYSTEM% %COMMON_FLAGS% -DBUILD_EXAMPLES=OFF
+    cmake --build build --config Release %MSVC_ALL_TARGET%
+    cmake --install build --config Release
+    @cd ..
+@endlocal
