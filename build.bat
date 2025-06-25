@@ -44,7 +44,7 @@
     cmake -S . -B build %MSVC_SYSTEM% %COMMON_FLAGS% -DBUILD_CXXLIBS=OFF -DBUILD_TESTING=OFF -DBUILD_DOCS=OFF -DINSTALL_MANPAGES=OFF -DBUILD_PROGRAMS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_UTILS=OFF
     cmake --build build --config Release %MSVC_ALL_TARGET%
     cmake --install build --config Release
-    cmake -E rm -rf D:\Project\mirrors\gitlab.xiph.org\xiph\install\include\FLAC++
+    cmake -E rm -rf %INSTALL_LOCATION%\include\FLAC++
     @cd ..
 @endlocal
 
