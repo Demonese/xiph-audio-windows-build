@@ -11,6 +11,7 @@ The artifact includes the following files:
 │   ├── FLAC.dll
 │   ├── ogg.dll
 │   ├── opus.dll
+│   ├── opusenc.dll
 │   ├── opusfile.dll
 │   ├── vorbis.dll
 │   ├── vorbisenc.dll
@@ -36,6 +37,7 @@ The artifact includes the following files:
 │   │   ├── opus_multistream.h
 │   │   ├── opus_projection.h
 │   │   ├── opus_types.h
+│   │   ├── opusenc.h
 │   │   └── opusfile.h
 │   └── vorbis
 │       ├── codec.h
@@ -58,6 +60,9 @@ The artifact includes the following files:
     │   │   ├── OpusConfigVersion.cmake
     │   │   ├── OpusTargets.cmake
     │   │   └── OpusTargets-release.cmake
+    │   ├── opusenc
+    │   │   ├── OpusEncTargets.cmake
+    │   │   └── OpusEncTargets-release.cmake
     │   ├── opusfile
     │   │   ├── OpusFileConfig.cmake
     │   │   ├── OpusFileConfigVersion.cmake
@@ -71,6 +76,7 @@ The artifact includes the following files:
     ├── FLAC.lib
     ├── ogg.lib
     ├── opus.lib
+    ├── opusenc.lib
     ├── opusfile.lib
     ├── pkgconfig
     │   ├── flac.pc
@@ -94,6 +100,8 @@ graph TB
     vorbisfile(vorbisfile)
     flac(flac)
     opus(opus)
+    opusfile(opusfile)
+    opusenc(opusenc)
 
     vorbis --> ogg
     vorbisenc --> vorbis
@@ -102,6 +110,7 @@ graph TB
     flac --> ogg
     opusfile --> ogg
     opusfile --> opus
+    opusenc --> opus
 ```
 
 
