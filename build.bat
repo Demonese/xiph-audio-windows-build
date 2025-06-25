@@ -64,6 +64,7 @@
     git clone https://github.com/Demonese/opusfile-windows.git opusfile --recursive
     cd opusfile
     git checkout -b feature/shared-library-exports origin/feature/shared-library-exports
+    git branch
     cmake -S . -B build %MSVC_SYSTEM% %COMMON_FLAGS% -DOP_DISABLE_HTTP=ON -DOP_DISABLE_EXAMPLES=ON -DOP_DISABLE_DOCS=ON
     cmake --build build --config Release %MSVC_ALL_TARGET%
     cmake --install build --config Release
