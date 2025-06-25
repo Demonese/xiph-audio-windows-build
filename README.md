@@ -83,3 +83,25 @@ The artifact includes the following files:
     ├── vorbisenc.lib
     └── vorbisfile.lib
 ```
+
+Dependency graph:
+
+```mermaid
+graph TB
+    ogg(ogg)
+    vorbis(vorbis)
+    vorbisenc(vorbisenc)
+    vorbisfile(vorbisfile)
+    flac(flac)
+    opus(opus)
+
+    vorbis --> ogg
+    vorbisenc --> vorbis
+    vorbisfile --> ogg
+    vorbisfile --> vorbis
+    flac --> ogg
+    opusfile --> ogg
+    opusfile --> opus
+```
+
+
